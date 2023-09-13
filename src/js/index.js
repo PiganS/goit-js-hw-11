@@ -13,6 +13,7 @@ let searchValue = '';
 
 async function fetchGallery(e) {
   e.preventDefault();
+  refs.loader.classList.remove('hidden');
   refs.btnloadMore.classList.add('hidden');
   refs.galleryBox.innerHTML = '';
   searchValue = e.currentTarget.searchQuery.value.trim();
@@ -30,6 +31,7 @@ async function responseProcessing() {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
+      refs.loader.classList.add('hidden');
       return;
     }
 
@@ -40,6 +42,7 @@ async function responseProcessing() {
     const markup = markupGalerry(gallery);
     refs.galleryBox.insertAdjacentHTML('beforeend', markup);
     lightbox.refresh();
+    refs.loader.classList.add('hidden');
 
     if (currentPage * 40 >= totalHits) {
       refs.btnloadMore.classList.add('hidden');
@@ -55,11 +58,13 @@ async function responseProcessing() {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+    refs.loader.classList.add('hidden');
   }
 }
 
 async function handleClick() {
   currentPage++;
+  refs.loader.classList.remove('hidden');
   await responseProcessing();
 
   const { height: cardHeight } = document

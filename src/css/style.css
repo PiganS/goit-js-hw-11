@@ -1,14 +1,13 @@
-/* .title {
+.title {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 800;
+  color: rgba(245, 240, 240, 0.945);
   box-shadow: 14px 14px 30px 0px rgba(0, 0, 0, 0.51);
   -webkit-box-shadow: 14px 14px 30px 0px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 14px 14px 30px 0px rgba(0, 0, 0, 0.51);
-  border-radius: 50px;
-  max-width: 700px;
 }
 .loader {
   position: absolute;
@@ -19,7 +18,7 @@
   width: 48px;
   height: 48px;
   border: 5px solid;
-  border-color: #4474bb transparent;
+  border-color: #ffffff transparent;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -33,7 +32,7 @@
   100% {
     transform: rotate(360deg);
   }
-} */
+}
 
 :root {
   --column-gap: 24px;
