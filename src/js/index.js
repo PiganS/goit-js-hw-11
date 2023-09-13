@@ -18,6 +18,11 @@ async function fetchGallery(e) {
   refs.galleryBox.innerHTML = '';
   searchValue = e.currentTarget.searchQuery.value.trim();
   currentPage = 1;
+  if (!searchValue) {
+    Notiflix.Notify.failure('Please , enter your request.');
+    refs.loader.classList.add('hidden');
+    return;
+  }
   responseProcessing();
 }
 
@@ -27,7 +32,7 @@ async function responseProcessing() {
     const gallery = data.hits;
     const totalHits = data.totalHits;
 
-    if (gallery.length === 0 || searchValue === '') {
+    if (gallery.length === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );

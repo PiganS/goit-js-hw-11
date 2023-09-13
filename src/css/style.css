@@ -121,18 +121,6 @@ body {
   font-style: inherit;
 }
 
-.info-title,
-.info-value {
-  text-decoration: none;
-  color: black;
-}
-
-.info-item i {
-  color: gray;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
 .search-form {
   display: flex;
   justify-content: center;

@@ -15,16 +15,16 @@ export function markupGalerry(gallery) {
         </a>
         <div class="info">
           <p class="info-item">
-            <b>Likes<br>${likes}</b>
+            <b>Likes:<br>${likes}</b>
           </p>
           <p class="info-item">
-            <b>Views<br>${views}</b>
+            <b>Views:<br>${views}</b>
           </p>
           <p class="info-item">
-            <b>Comments<br>${comments}</b>
+            <b>Comments:<br>${comments}</b>
           </p>
           <p class="info-item">
-            <b>Downloads<br>${downloads}</b>
+            <b>Download:<br>${downloads}</b>
           </p>
         </div>
         </div>`
